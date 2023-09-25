@@ -1,11 +1,9 @@
 <script setup>
-import Home from './components/Home.vue';
+import Home from './views/Home.vue';
 </script>
 
 <template>
   <header>
-    <img alt="Yin Yang" class="logo" src="./assets/Yin_yang.svg" width="100" height="100" />
-
     <div class="wrapper">
       <Home />
     </div>
@@ -30,6 +28,7 @@ header {
 
   .logo {
     margin: 0 2rem 0 0;
+    z-index: 1;
   }
 
   header .wrapper {
