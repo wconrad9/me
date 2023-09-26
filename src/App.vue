@@ -13,7 +13,10 @@ import Home from './views/Home.vue';
 <style scoped>
 header {
   line-height: 1.5;
+  width: 100;
+  box-sizing: border-box;
 }
+
 
 .logo {
   margin: 0 auto 2rem;

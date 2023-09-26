@@ -1,7 +1,7 @@
 <template>
   <div class="photo-gallery">
     <div v-for="(photo, index) in photos" :key="index" class="photo-container">
-      <img :src="photo" alt="Film Photography" @click="openLightbox(index)" />
+      <img :src="photo" alt="Film Photography" class="image" @click="openLightbox(index)" />
     </div>
 
     <EasyLightbox
@@ -63,23 +63,35 @@ export default {
 };
 </script>
   
-  <style scoped>
-  .photo-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .photo-container img {
-    max-width: 90%; 
-    border: 3px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-  }
-  
-  .photo-container img:hover {
-    transform: scale(1.05);
-  }
-  </style>
-  
+<style scoped>
+.photo-gallery {
+  top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+}
+
+.container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 8px;
+}
+
+
+.photo-container img {
+  max-width: 60%; 
+  border: 3px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.image {
+width: 100%;
+height: auto;
+}
+
+.photo-container img:hover {
+  transform: scale(1.05);
+}
+</style>

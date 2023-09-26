@@ -56,7 +56,6 @@
       </div>
   
       <div v-if="activeTab === 'Photography'">
-        <h2>35mm Photography</h2>
         <FilmPhotography></FilmPhotography>
       </div>
   
@@ -97,6 +96,10 @@
   
   <style>
   
+  body {
+    overflow: hidden;
+  }
+
   /* video styling */
 
   .video-container {
@@ -105,38 +108,28 @@
     height: 100vh;  /* Adjust based on your design. */
   }
 
-  video {
-      /* Make video to at least 100% wide and tall */
-      min-width: 40%; 
-      min-height: 25%;
-
-      /* Setting width & height to auto prevents the video from being letterboxed */
-      width: auto;
-      height: auto;
-
-      /* Center the video */
-      /* position: absolute; */
-      top: 25%;
-      left: 40%;
-      transform: translate(-50%, -50%);
-      border-radius: 50px;
+    video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .sk {
-      /* Make video to at least 100% wide and tall */
-      min-width: 40%; 
-      min-height: 25%;
+      object-fit: cover;
 
       /* Setting width & height to auto prevents the video from being letterboxed */
-      width: auto;
-      height: auto;
+      width: 100vw;
+      height: 100vh;
 
       /* Center the video */
-      position: absolute;
-      top: 75%;
+      position: fixed;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      border-radius: 50px;
   }
 
   .content-over-video {
@@ -161,7 +154,7 @@
   }
   
   nav li.active {
-    background-color: #ccc;
+    background-color: #811f88b9;
   }
   
   h1 {
