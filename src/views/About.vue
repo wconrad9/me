@@ -7,7 +7,7 @@
             <br>
         </div>
     </ul><link rel="stylesheet" href="style.css">
-    <div>
+    <div class="image_container">
         <img
         width="250"
         heigh="250"
@@ -31,3 +31,13 @@ export default {
     }
 }
 </script>
+
+<style>
+
+.image_container {
+    display: flex;
+    justify-content: center;
+    margin: 1em 1em;
+}
+
+</style>

@@ -31,6 +31,9 @@
               <source src="/src/assets/videos/ShuffleKing.0.mp4" type="video/mp4">
               Your browser does not support the video tag.
         </video>
+        <div class="content-over-video">
+          <h1>Shuffle King</h1>
+        </div>
       </div>
       
       <div v-if="activeTab === 'About'">
@@ -95,10 +98,6 @@
   </script>
   
   <style>
-  
-  body {
-    overflow: hidden;
-  }
 
   /* video styling */
 
@@ -122,7 +121,7 @@
       object-fit: cover;
 
       /* Setting width & height to auto prevents the video from being letterboxed */
-      width: 100vw;
+      width: 60vw;
       height: 100vh;
 
       /* Center the video */
@@ -133,11 +132,15 @@
   }
 
   .content-over-video {
-      position: absolute;
+      position: relative;
+      font-family: cursive;
+      font-style: italic;
+      margin-top: 2rem;
+      top: 10%;
       bottom: 20%;  /* Adjust based on your design. */
-      left: 5%;    /* Adjust based on your design. */
+      left: 10%;    /* Adjust based on your design. */
       z-index: 1;
-      color: white; /* Or any color that provides contrast against your video */
+      color: rgba(251, 235, 254, 0.992); /* Or any color that provides contrast against your video */
   }
 
   nav ul {

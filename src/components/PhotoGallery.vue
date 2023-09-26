@@ -64,6 +64,10 @@ export default {
 </script>
   
 <style scoped>
+
+body, html {
+  overflow: auto;
+}
 .photo-gallery {
   top: 40px;
   display: flex;
